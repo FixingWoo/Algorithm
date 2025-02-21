@@ -11,3 +11,5 @@ for (let n = 1; n <= M; n++) {
 }
 
 console.log(basket.join(' '));
+
+// fill(value, start, end) > 1, 3이면 1,2 교체
