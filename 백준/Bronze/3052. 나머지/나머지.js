@@ -16,3 +16,5 @@ remainders.forEach((item) => {
 const count = Object.keys(frequency).length;
 
 console.log(count);
+
+// after > 빈도수로 접근하지 않고 Set으로 하면 더 간단할것을...
