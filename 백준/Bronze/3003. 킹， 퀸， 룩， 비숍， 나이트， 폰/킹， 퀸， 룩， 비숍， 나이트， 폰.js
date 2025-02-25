@@ -8,7 +8,5 @@ const input = fs
   .map(Number);
 
 const originPieces = [1, 1, 2, 2, 2, 8];
-const pieces = input;
-
-const result = originPieces.map((piece, i) => piece - pieces[i]);
+const result = originPieces.map((piece, i) => piece - input[i]);
 console.log(result.join(' '));
