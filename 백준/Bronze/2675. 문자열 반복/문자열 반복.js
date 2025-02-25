@@ -4,19 +4,9 @@ const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 
 for (let i = 1; i < input.length; i++) {
   const [N, S] = input[i].split(' ');
-  const str = S.split('');
-
-  let count = N;
-  let result = '';
-
-  for (let j = 0; j < str.length; j++) {
-    while (count) {
-      result += str[j];
-      count--;
-    }
-
-    count = N;
-  }
+  const result = [...S].map((char) => char.repeat(Number(N))).join('');
 
   console.log(result);
 }
+
+// repeat() 메서드는 문자열을 주어진 횟수만큼 반복해 붙인 새로운 문자열을 반환합니다.
