@@ -10,8 +10,5 @@ const input = fs
 const originPieces = [1, 1, 2, 2, 2, 8];
 const pieces = input;
 
-const result = originPieces.map((piece, i) => {
-  return piece - pieces[i];
-});
-
+const result = originPieces.map((piece, i) => piece - pieces[i]);
 console.log(result.join(' '));
