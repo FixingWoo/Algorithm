@@ -27,3 +27,30 @@ for (let i = 0; i < input.length; i++) {
 }
 
 console.log((sum / gradeTotal).toFixed(6));
+
+
+/**
+* 1. Number > parseFloat
+* - 소수점도 포함하여 안전하게 변환
+*
+* 2. reduce
+* - 가독성 향상, 코드 길이 감소
+*/
+const { sum, gradeTotal } = input.reduce(
+  (acc, row) => {
+    const [_, credit, grage] = row.split(' ');
+
+    console.log(credit, grage);
+
+    if (grage !== 'P') {
+      const parsedCredit = parseFloat(credit);
+      acc.gradeTotal += parsedCredit;
+      acc.sum += scores[grage] * parsedCredit;
+    }
+
+    return acc;
+  },
+  { sum: 0, gradeTotal: 0 }
+);
+
+console.log((sum / gradeTotal).toFixed(6));
