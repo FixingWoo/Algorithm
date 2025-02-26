@@ -40,8 +40,6 @@ const { sum, gradeTotal } = input.reduce(
   (acc, row) => {
     const [_, credit, grage] = row.split(' ');
 
-    console.log(credit, grage);
-
     if (grage !== 'P') {
       const parsedCredit = parseFloat(credit);
       acc.gradeTotal += parsedCredit;
