@@ -6,7 +6,7 @@ const N = Number(input[0]);
 let count = N;
 
 for (let i = 1; i <= N; i++) {
-  word = input[i];
+  const word = input[i];
   const seen = new Set();
   let prev = '';
 
