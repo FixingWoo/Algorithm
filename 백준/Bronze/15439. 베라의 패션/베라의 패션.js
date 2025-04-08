@@ -3,11 +3,5 @@ const input = require('fs')
   .toString()
   .trim();
 
-const N = Number(input);
-const n = N - 1;
-
-if (N === 1) {
-  console.log(0);
-} else {
-  console.log(N * n);
-}
+const N = parseInt(input);
+console.log(N * (N - 1));
